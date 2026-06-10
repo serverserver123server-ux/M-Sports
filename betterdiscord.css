@@ -1,8 +1,8 @@
 /**
- * @name M-Sport BetterDiscord UI
+ * @name M-Sport BetterDiscord UI Engine
  * @author HeySk777
- * @version 1.4.2
- * @description Companion CSS for the M-Sport Theme to style BetterDiscord and Vencord menus.
+ * @version 1.4.4
+ * @description Standalone companion interface module for the M-Sport theme ecosystem.
  */
 
 @keyframes cv-channel-select {
@@ -27,94 +27,132 @@
 }
 
 
-/* Store & Addon Cards */
+/* ========================================== */
+
+
+/* 💎 BETTERDISCORD SHOP & STORE MODULES 💎    */
+
+
+/* ========================================== */
 
 .visual-refresh .bd-store-card {
-    background: var(--hsl-card-shading);
-    border: 1px solid rgba(0, 0, 0, 0);
+    background: var(--hsl-card-shading) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
 .visual-refresh .bd-store-card:hover {
-    background: var(--hsl-card-shading);
-    box-shadow: none;
-    border-color: var(--hsl-main-color);
+    background: var(--hsl-card-shading) !important;
+    box-shadow: 0 0 15px rgba(231, 34, 46, 0.2) !important;
+    border-color: var(--hsl-main-color) !important;
 }
 
 .visual-refresh .bd-addon-store-card {
-    background: var(--hsl-card-shading);
-    border: 1px solid rgba(0, 0, 0, 0);
+    background: var(--hsl-card-shading) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
 .visual-refresh .bd-addon-store-card:hover {
-    background: var(--hsl-card-shading);
-    box-shadow: none;
-    border-color: var(--hsl-main-color);
+    background: var(--hsl-card-shading) !important;
+    box-shadow: 0 0 15px rgba(231, 34, 46, 0.2) !important;
+    border-color: var(--hsl-main-color) !important;
 }
 
 .visual-refresh .bd-addon-store-card .bd-addon-store-card-tag {
-    background: rgba(0, 0, 0, 0);
-    border: 1px solid var(--hsl-main-color);
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid var(--hsl-main-color) !important;
+    color: var(--text-normal) !important;
 }
 
 
-/* Plugin & Theme List Cards */
+/* ========================================== */
+
+
+/* 💎 THEME & PLUGIN LIST INTERFACE 💎         */
+
+
+/* ========================================== */
 
 .visual-refresh .bd-addon-card {
-    background: var(--hsl-card-shading);
-    border: 2px solid rgba(0, 0, 0, 0);
+    background: var(--hsl-card-shading) !important;
+    backdrop-filter: blur(12px) !important;
+    border: 2px solid rgba(0, 0, 0, 0) !important;
 }
 
 .visual-refresh .bd-addon-card:hover {
-    background: var(--hsl-card-shading);
-    border-color: var(--hsl-main-color);
+    background: var(--hsl-card-shading) !important;
+    border-color: var(--hsl-main-color) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
 .visual-refresh .bd-addon-header {
-    background: var(--hsl-card-shading);
+    background: transparent !important;
+    border-bottom: 1px solid rgba(231, 34, 46, 0.1) !important;
 }
 
 
-/* Notifications & Modals */
+/* ========================================== */
+
+
+/* 💎 NOTIFICATIONS & CONTROL MODALS 💎       */
+
+
+/* ========================================== */
 
 .visual-refresh .bd-notification {
-    background: var(--hsl-card-shading);
+    background: var(--hsl-popout-shading) !important;
+    backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
 }
 
 .visual-refresh .bd-notification-footer {
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.2) !important;
 }
 
 .visual-refresh .bd-modal-root {
-    background: var(--hsl-card-shading);
-    border: 2px solid var(--hsl-main-color);
+    background: var(--hsl-modal-shading) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 2px solid var(--hsl-main-color) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7) !important;
 }
 
 .visual-refresh .bd-modal-footer {
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.2) !important;
 }
 
 
-/* Buttons */
+/* ========================================== */
+
+
+/* 🏎️ BUTTONS & ACTIVE STATE ALERTS 🏎️         */
+
+
+/* ========================================== */
 
 .visual-refresh .bd-button-filled.bd-button-color-primary {
-    border-radius: 4px;
-    background: var(--hsl-main-color);
-    border-color: rgba(0, 0, 0, 0);
+    border-radius: 6px !important;
+    background: var(--hsl-main-color) !important;
+    border: none !important;
+    font-weight: 600 !important;
+    transition: background-color 0.2s ease, transform 0.1s ease !important;
 }
 
-.visual-refresh .bd-button-filled.bd-button-color-primary:hover,
+.visual-refresh .bd-button-filled.bd-button-color-primary:hover {
+    background: var(--hsl-hover-color) !important;
+}
+
 .visual-refresh .bd-button-filled.bd-button-color-primary:active {
-    background: var(--hsl-hover-color);
-    border-color: rgba(0, 0, 0, 0);
+    transform: scale(0.96) !important;
 }
-
-
-/* Errors & Alerts */
 
 .visual-refresh .bd-addon-error-icon {
-    background: var(--hsl-main-color);
+    background: var(--hsl-main-color) !important;
 }
 
 .visual-refresh .bd-addon-error {
-    border: 1px solid var(--hsl-main-color);
+    border: 1px solid var(--hsl-main-color) !important;
+    background: rgba(231, 34, 46, 0.05) !important;
+    border-radius: 6px !important;
 }
